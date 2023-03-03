@@ -12,22 +12,16 @@ class HomeScreen extends StatelessWidget {
         onTap: () {
           RandomColorGeneratorCubit.get(context).generateRandomColorColor();
         },
-        child: BlocBuilder<RandomColorGeneratorCubit, RandomColorGeneratorState>(
+        child:
+            BlocBuilder<RandomColorGeneratorCubit, RandomColorGeneratorState>(
           builder: (context, state) {
-            if(state is NewColorGenerated) {
-              return Container(
-              height: ,
-              width: 200,
-              color: state.newColor,
+            return Container(
+              height: double.infinity,
+              width: double.infinity,
+              color: state is NewColorGenerated ? state.newColor : Colors.white,
+              alignment: Alignment.center,
+              child: const Text("Hello Yana Mandziuk ^_^"),
             );
-            }
-            else{
-              return Container(
-                height: 500,
-                width: 250,
-                color: Colors.red,
-              );
-            }
           },
         ),
       ),

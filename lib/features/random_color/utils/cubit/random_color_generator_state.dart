@@ -4,6 +4,7 @@ part of 'random_color_generator_cubit.dart';
 abstract class RandomColorGeneratorState {}
 
 class RandomColorGeneratorInitial extends RandomColorGeneratorState {}
+
 class NewColorGenerated extends RandomColorGeneratorState {
   final Color newColor;
 
