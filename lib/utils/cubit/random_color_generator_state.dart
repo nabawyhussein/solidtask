@@ -1,4 +1,4 @@
-part of 'random_color_generator_cubit.dart';
+part of '../../../../utils/cubit/random_color_generator_cubit.dart';
 
 @immutable
 abstract class RandomColorGeneratorState {}

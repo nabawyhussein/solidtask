@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:solidtask/utils/resources/constants_manager.dart';
 import '../features/random_color/presentation/home/screens/home_screen.dart';
-import '../features/random_color/utils/cubit/random_color_generator_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../utils/cubit/random_color_generator_cubit.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,10 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => RandomColorGeneratorCubit(),
-      child: MaterialApp(
-        title: 'Solid Task',
+      child: const MaterialApp(
+        title: ConstantsManger.appTitle,
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen(),
+        home: HomeScreen(),
       ),
     );
   }

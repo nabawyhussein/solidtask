@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:solidtask/features/random_color/utils/cubit/random_color_generator_cubit.dart';
-
-import '../../../utils/app_size/screen_size_controller.dart';
+import 'package:solidtask/utils/cubit/random_color_generator_cubit.dart';
+import 'package:solidtask/utils/resources/constants_manager.dart';
+import '../../../../../utils/app_size/screen_size_controller.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,10 +22,10 @@ class HomeScreen extends StatelessWidget {
               width: double.infinity,
               color: state is NewColorGenerated ? state.newColor : Colors.white,
               alignment: Alignment.center,
-              child:  Text("Hello Yana Mandziuk ^_^",
+              child:  Text(ConstantsManger.homeScreenCenterTxt,
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                     fontWeight: FontWeight.bold,
-                    fontSize: AppScreenSize.responsiveTextValue(context, 70),
+                    fontSize: AppScreenSize.responsiveTextValue(context, ConstantsManger.homeScreenTxtSize),
                     color: Colors.black
                 ),
               ),
