@@ -14,9 +14,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         body: GestureDetector(
           behavior: HitTestBehavior.opaque,
-          onTap: () {
-            RandomColorGeneratorCubit.get(context).generateRandomColorColor();
-          },
+          onTap: () =>RandomColorGeneratorCubit.get(context).generateRandomColorColor(),
           child:
               BlocBuilder<RandomColorGeneratorCubit, RandomColorGeneratorState>(
             builder: (context, state) {
