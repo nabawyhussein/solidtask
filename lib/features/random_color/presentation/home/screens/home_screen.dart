@@ -12,7 +12,8 @@ class HomeScreen extends StatelessWidget {
     return WillPopScope(
       onWillPop: (){return Future.value(false);},
       child: Scaffold(
-        body: InkWell(
+        body: GestureDetector(
+          behavior: HitTestBehavior.opaque,
           onTap: () {
             RandomColorGeneratorCubit.get(context).generateRandomColorColor();
           },
