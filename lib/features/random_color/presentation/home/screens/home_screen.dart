@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
           builder: (context, state) {
             if(state is NewColorGenerated) {
               return Container(
-              height: 500,
+              height: ,
               width: 200,
               color: state.newColor,
             );

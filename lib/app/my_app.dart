@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
       create: (context) => RandomColorGeneratorCubit(),
       child: MaterialApp(
         title: 'Solid Task',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        debugShowCheckedModeBanner: false,
         home: const HomeScreen(),
       ),
     );
