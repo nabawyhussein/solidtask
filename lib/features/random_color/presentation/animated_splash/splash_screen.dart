@@ -24,16 +24,11 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   _goNextScreen() {
-    // addMarker(locationCubit);
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const HomeScreen()),
-    );
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()),);
   }
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _animationController = AnimationController(
       vsync: this,
