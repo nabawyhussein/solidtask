@@ -6,5 +6,5 @@ class AppScreenSize {
   static double responsiveHeightValue(BuildContext context, double value) =>
       MediaQuery.of(context).size.height;
   static double responsiveTextValue(BuildContext context, double value) =>
-      MediaQuery.of(context).size.width *(value / 1280.0);
+      MediaQuery.of(context).size.width * (value / 1280.0);
 }

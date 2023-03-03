@@ -19,12 +19,15 @@ class _SplashScreenState extends State<SplashScreen>
   late Animation<double> _animation;
 
   _startDelay() async {
-    _timer =
-        Timer(const Duration(seconds: ConstantsManger.splashDelay), _goNextScreen);
+    _timer = Timer(
+        const Duration(seconds: ConstantsManger.splashDelay), _goNextScreen);
   }
 
   _goNextScreen() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()),);
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
+    );
   }
 
   @override

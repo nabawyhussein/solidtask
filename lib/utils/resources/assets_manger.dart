@@ -5,4 +5,3 @@ const String JSON_PATH = "assets/json";
 class AppImages {
   static const appLogo = "$IMAGE_PATH/logo.png";
 }
-
